@@ -1,66 +1,147 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Discord Bot - Home</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f9;
-      color: #333;
-      text-align: center;
-      padding: 50px;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2c2f33;
+      color: #ffffff;
     }
-    a {
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #23272a;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .menu {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .menu div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    .menu:hover {
+      opacity: 0.8;
+    }
+
+    .menu a {
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #2c2f33;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: none;
+    }
+
+    .menu.open a {
+      display: block;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 40px;
+      background-color: #23272a;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .btn-invite {
+      background-color: #7289da;
+      color: white;
+      padding: 15px 35px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-invite:hover {
+      background-color: #5b6e99;
+    }
+
+    .links {
+      margin-top: 40px;
+    }
+
+    .links a {
       color: #7289da;
       text-decoration: none;
       font-weight: bold;
+      margin: 0 10px;
     }
-    a:hover {
+
+    .links a:hover {
       text-decoration: underline;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background-color: #23272a;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      color: #fff;
-    }
-    .btn-invite {
-      background-color: #7289da;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      transition: background-color 0.3s ease;
-    }
-    .btn-invite:hover {
-      background-color: #5b6e99;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <div class="logo">💻 Discord Bot</div>
+    <div class="menu" onclick="toggleMenu(this)">
+      <div></div>
+      <div></div>
+      <div></div>
+      <a href="creatore.html">Creatore</a>
+    </div>
+  </header>
+
   <div class="container">
     <h1>Benvenuto nel mio Discord Bot!</h1>
-    <p>Questo bot ti aiuta a gestire il tuo server con comandi utili e divertenti.</p>
+    <p>Un assistente perfetto per il tuo server Discord. Facile, veloce e utile!</p>
 
-    <div>
-      <a href="privacy.html">Privacy Policy</a> |
+    <a href="https://discord.com/oauth2/authorize?client_id=TUO_ID_BOT&scope=bot&permissions=8" target="_blank">
+      <button class="btn-invite">Invita il Bot</button>
+    </a>
+
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Termini di Servizio</a>
     </div>
-
-    <!-- Pulsante "Invita" -->
-    <div style="margin-top: 30px;">
-      <a href="https://discord.com/oauth2/authorize?client_id=1358464588970066281&permissions=8&integration_type=0&scope=bot" target="_blank">
-        <button class="btn-invite">Invita il Bot</button>
-      </a>
-    </div>
   </div>
+
+  <script>
+    function toggleMenu(menu) {
+      menu.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
