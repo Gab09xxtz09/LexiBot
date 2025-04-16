@@ -7,8 +7,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #2c2f33;
-      color: #fff;
+      background-color: #f4f6f9;
+      color: #333;
       text-align: center;
       padding: 50px;
     }
@@ -27,6 +27,21 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      color: #fff;
+    }
+    .btn-invite {
+      background-color: #7289da;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    .btn-invite:hover {
+      background-color: #5b6e99;
     }
   </style>
 </head>
@@ -34,11 +49,18 @@
   <div class="container">
     <h1>Benvenuto nel mio Discord Bot!</h1>
     <p>Questo bot ti aiuta a gestire il tuo server con comandi utili e divertenti.</p>
-    
-    <p>
+
+    <div>
       <a href="privacy.html">Privacy Policy</a> |
       <a href="terms.html">Termini di Servizio</a>
-    </p>
+    </div>
+
+    <!-- Pulsante "Invita" -->
+    <div style="margin-top: 30px;">
+      <a href="https://discord.com/oauth2/authorize?client_id=TUO_ID_BOT&scope=bot&permissions=BOT_PERMISSION" target="_blank">
+        <button class="btn-invite">Invita il Bot</button>
+      </a>
+    </div>
   </div>
 </body>
 </html>
